@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome-side {
+    background: #000;
+    color: #fff;
+    padding: 50px;
+    width: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-side::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 100px;
+    height: 100%;
+    background: #000;
+    transform: skewX(-10deg);
+}
+
+.welcome-side h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.welcome-side p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.form-side {
+    width: 60%;
+    padding: 50px;
+    padding-left: 100px;
+}
+
+.form-container {
+    max-width: 400px;
+}
+
+h2 {
+    color: #000;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 40px;
+    height: 2px;
+    background: #000;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 1rem;
+    color: #666;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group i {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #666;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.input-group input:focus {
+    border-bottom: 1px solid #000;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+
+.switch-text {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.switch-text a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .welcome-side {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .welcome-side::after {
+        display: none;
+    }
+
+    .form-side {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .form-container {
+        margin: 0 auto;
+    }
+} 

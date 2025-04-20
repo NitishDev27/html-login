@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Left side - Welcome message -->
+            <div class="welcome-side">
+                <h1>WELCOME<br>BACK!</h1>
+                <p>Lorem ipsum dolor sit<br>amet consectetur<br>adipisicing elit.<br>Delenit,rem?</p>
+            </div>
+
+            <!-- Right side - Form -->
+            <div class="form-side">
+                <div class="form-container" id="signupForm">
+                    <h2>Sign Up</h2>
+                    <form onsubmit="return handleSubmit(event)">
+                        <div class="input-group">
+                            <input type="text" id="username" required>
+                            <label for="username">Username</label>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email</label>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password" required>
+                            <label for="password">Password</label>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <button type="submit" class="submit-btn">Sign Up</button>
+                        <p class="switch-text">
+                            Already have an account? 
+                            <a href="#" onclick="toggleForm('login')">Login</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="form-container" id="loginForm" style="display: none;">
+                    <h2>Login</h2>
+                    <form onsubmit="return handleSubmit(event)">
+                        <div class="input-group">
+                            <input type="email" id="loginEmail" required>
+                            <label for="loginEmail">Email</label>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="loginPassword" required>
+                            <label for="loginPassword">Password</label>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <button type="submit" class="submit-btn">Login</button>
+                        <p class="switch-text">
+                            Don't have an account? 
+                            <a href="#" onclick="toggleForm('signup')">Sign Up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
